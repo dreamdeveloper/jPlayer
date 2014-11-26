@@ -1630,6 +1630,11 @@
 						this._seeked();
 						this._trigger(eventType);
 						break;
+					case $.jPlayer.event.loadedmetadata:
+						this._getFlashStatus(status);
+						this._updateInterface();
+						this._trigger(eventType);
+						break;
 					case $.jPlayer.event.ready:
 						// The ready event is handled outside the switch statement.
 						// Captured here otherwise 2 ready events would be generated if the ready event handler used setMedia.
